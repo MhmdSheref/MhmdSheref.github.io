@@ -5,7 +5,43 @@
 html{
     font-family: sans-serif;
 }
+body{
+    padding: 0;
+    margin: 0;
+}
 
-li{
-    /*TODO: add background image*/
+header{
+    position: fixed;
+    background-color: #afafaf;
+    width: 100%;
+}
+.nav-container{
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+    height: inherit;
+    margin: 0;
+    width: 30%;
+}
+.nav-container>li{
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.nav{
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+}
+.bg-image{
+    object-fit: cover;
+    width: 100vw;
+    height: 99vh;
+    margin: 0;
+    padding: 0;
+}
+#logo{
+    width: 50px;
+    height: 50px;
 }
