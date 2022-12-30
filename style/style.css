@@ -47,6 +47,7 @@ header{
     object-fit: cover;
     width: 100vw;
     height: 99vh;
+    height: 99dvh;
     margin: 0;
     padding: 0;
 }
