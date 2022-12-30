@@ -1,7 +1,3 @@
-:root{
-
-}
-
 html{
     font-family: sans-serif;
 }
@@ -9,12 +5,11 @@ body{
     padding: 0;
     margin: 0;
 }
-
 header{
     z-index: 10;
     position: fixed;
-    background-color: rgba(255, 255, 255, 0.25);
-    box-shadow: 0px 1px 20px rgba(0, 0, 0, 0.25);
+    background-color: #b91d735b;
+    box-shadow: 0px 1px 20px rgba(0, 0, 0, 0.5);
     width: 100%;
 }
 .nav-container{
@@ -35,6 +30,14 @@ header{
     justify-content: center;
     color: black;
     text-decoration: none;
+    background: linear-gradient(45deg, transparent 30%, #ffb922AA 80%, #b91d73AA 100%);
+    background-size: 500%;
+    background-position: 0% 0%;
+    transition: background-position 0.4s;
+    
+}
+.nav-container a:hover{
+    background-position: 100% 100%;
 }
 .nav-container li{
     list-style: none;
@@ -54,17 +57,14 @@ header{
 #ham-menu-hidden{
     display: none;
 }
-
 @media  screen and (max-width: 480px) {
     .nav-container{
         display: none;
-        background-color: rgba(75, 75, 75, 0.25);
+        background-color: rgba(75, 75, 75, 0.5);
         width: 100%;
         max-width: none;
         flex-direction: column;
         justify-content: space-evenly;
-        pointer-events: none;
-        
     }
     #ham-menu{
         display: block;

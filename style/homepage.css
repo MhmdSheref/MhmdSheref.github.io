@@ -1,38 +1,37 @@
 body{
     background-color: black;
 }
-.slide{
-    width: 100%;
-    height: 98vh;
-    margin: 0;
-    padding: 0;
-    display: grid;
-    margin-bottom: 1vh;
-}
 .first{
     background: url("https://images.unsplash.com/photo-1672197339033-688e27f884f2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1311&q=80")
     no-repeat center center fixed;
-    background-size: cover;
+
+    
 }
 .second{
     background: url("https://images.unsplash.com/photo-1672318043025-66d0ff90e04c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1974&q=80    ")
     no-repeat center center fixed;
-    background-size: cover;
 }
 .third{
     background: url("https://images.unsplash.com/photo-1672404383601-437618e85eae?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80")
     no-repeat center center fixed;
+}
+.slide{
+    width: 100%;
+    height: 98vh;
+    height: 98lvh;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    margin-bottom: 1vh;
+    margin-bottom: 1lvh;
     background-size: cover;
 }
-
-
-
 #title{
     margin: auto;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-weight: 900;
-    font-size: 9vw;
-    text-align: center;
+    font-size: 17vw;
+    text-align:start;
     color: white;
 
 }
