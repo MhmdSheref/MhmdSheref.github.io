@@ -12,22 +12,31 @@ body{
 
 header{
     position: fixed;
-    background-color: #afafaf;
+    background-color: rgba(255, 255, 255, 0.25);
+    box-shadow: 0px 1px 20px rgba(0, 0, 0, 0.25);
     width: 100%;
 }
 .nav-container{
+    padding: 0;
     display: flex;
     align-content: center;
     justify-content: space-between;
     height: inherit;
     margin: 0;
-    width: 30%;
+    width: 40%;
+    max-width: 400px;
+    flex-direction: row;
 }
-.nav-container>li{
+.nav-container a{
     flex-grow: 1;
     display: flex;
     align-items: center;
     justify-content: center;
+    color: black;
+    text-decoration: none;
+}
+.nav-container li{
+    list-style: none;
 }
 .nav{
     display: flex;
@@ -42,6 +51,36 @@ header{
     padding: 0;
 }
 #logo{
-    width: 50px;
-    height: 50px;
+    padding: 10px;
+}
+#ham-menu{
+    display: none;
+    padding: 10px;
+}
+#ham-menu-hidden{
+    display: none;
+}
+
+@media  screen and (max-width: 480px) {
+    .nav-container{
+        display: none;
+        background-color: rgba(75, 75, 75, 0.25);
+        width: 100%;
+        max-width: none;
+    }
+    #ham-menu{
+        display: block;
+    }
+    #ham-menu-hidden:checked + .nav-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+    .nav{
+        flex-wrap: wrap;
+    }
+    .nav-container a {
+        padding: 6px;
+    }
+
 }
