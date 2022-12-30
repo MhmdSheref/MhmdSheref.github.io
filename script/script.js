@@ -1,3 +1,4 @@
 addEventListener("resize", function(){
-    this.document.documentElement.style.setProperty("--vh", this.outerHeight/100)
+    document.documentElement.style.setProperty("--vh", outerHeight/100)
+    console.log(outerHeight)
 })
