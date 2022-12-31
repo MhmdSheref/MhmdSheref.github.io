@@ -1,18 +1,21 @@
-html{
+html {
     font-family: sans-serif;
 }
-body{
+
+body {
     padding: 0;
     margin: 0;
 }
-header{
+
+header {
     z-index: 10;
     position: fixed;
     background-color: #b91d735b;
     box-shadow: 0px 1px 20px rgba(0, 0, 0, 0.5);
     width: 100%;
 }
-.nav-container{
+
+.nav-container {
     padding: 0;
     display: flex;
     align-content: center;
@@ -23,7 +26,8 @@ header{
     max-width: 600px;
     flex-direction: row;
 }
-.nav-container a{
+
+.nav-container a {
     flex-grow: 1;
     display: flex;
     align-items: center;
@@ -37,29 +41,36 @@ header{
     transition: background-position 0.4s;
     
 }
-.nav-container a:hover{
+
+.nav-container a:hover {
     background-position: 100% 100%;
 }
-.nav-container li{
+
+.nav-container li {
     list-style: none;
 }
-.nav{
+
+.nav {
     display: flex;
     align-content: center;
     justify-content: space-between;
 }
-#logo{
+
+#logo {
     padding: 10px;
 }
-#ham-menu{
+
+#ham-menu {
     display: none;
     padding: 10px;
 }
-#ham-menu-hidden{
+
+#ham-menu-hidden {
     display: none;
 }
+
 @media  screen and (max-width: 480px) {
-    .nav-container{
+    .nav-container {
         display: none;
         background-color: rgba(75, 75, 75, 0.5);
         width: 100%;
@@ -67,15 +78,19 @@ header{
         flex-direction: column;
         justify-content: space-evenly;
     }
-    #ham-menu{
+
+    #ham-menu {
         display: block;
     }
-    #ham-menu-hidden:checked + .nav-container{
+
+    #ham-menu-hidden:checked + .nav-container {
         display: flex;
     }
-    .nav{
+
+    .nav {
         flex-wrap: wrap;
     }
+
     .nav-container a {
         padding: 6px;
     }
