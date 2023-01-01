@@ -1,0 +1,11 @@
+@import "style.css";
+
+html {
+    background-color: darkgray;
+}
+main {
+    margin: auto;
+    max-width: 1080px;
+    width: 100vw;
+    background-color: white;
+}

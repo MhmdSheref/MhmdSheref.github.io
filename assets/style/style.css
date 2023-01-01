@@ -11,7 +11,7 @@ header {
     z-index: 10;
     position: fixed;
     background-color: #b91d735b;
-    box-shadow: 0px 1px 20px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 1px 20px rgba(0, 0, 0, 0.5);
     width: 100%;
 }
 
@@ -35,9 +35,8 @@ header {
     color: white;
     font-size: 1.2rem;
     text-decoration: none;
-    background: linear-gradient(45deg, transparent 30%, #ffb92266 80%, #b91d73AA 100%);
+    background: linear-gradient(45deg, transparent 30%, #ffb92266 80%, #b91d73AA), 0 0;
     background-size: 500%;
-    background-position: 0% 0%;
     transition: background-position 0.4s;
     
 }
@@ -45,11 +44,6 @@ header {
 .nav-container a:hover {
     background-position: 100% 100%;
 }
-
-.nav-container li {
-    list-style: none;
-}
-
 .nav {
     display: flex;
     align-content: center;

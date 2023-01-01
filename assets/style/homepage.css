@@ -24,10 +24,9 @@ body {
 .slide {
     width: 100%;
     height: 98vh;
-    margin: 0;
+    margin: 0 0 1vh 0;
     padding: 0;
     display: grid;
-    margin-bottom: 1vh;
     background-size: cover;
 }
 
@@ -45,6 +44,9 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: whitesmoke;
 }
+.centered{
+    text-align: center;
+}
 
 .sub-title a {
     color: #00a800;
@@ -54,7 +56,6 @@ body {
     background: linear-gradient(30deg, #ffb922, #b91d73);
     background-clip: text;
     -webkit-background-clip: text;
-    -moz-background-clip: text;
     color: transparent;
 }
 
@@ -101,9 +102,7 @@ body {
 
 .article-preview p {
     color: rgb(163, 163, 163);
-    white-space:pre-line;
     overflow: hidden;
-    text-overflow: ellipsis;
 }
 
 .article-preview > * {
