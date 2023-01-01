@@ -1,11 +1,50 @@
 @import "style.css";
 
-html {
-    background-color: darkgray;
+body {
+	background-color: #335;
 }
 main {
-    margin: auto;
-    max-width: 1080px;
-    width: 100vw;
-    background-color: white;
+	margin: auto;
+	padding: 100px 30px;
+	max-width: 1080px;
+	background-color: #223;
+	box-shadow: 0 10px 10px black;
+}
+.grid-container {
+	justify-content: space-evenly;
+	align-items: center;
+	display: grid;
+	grid-auto-flow: row;
+	gap: 30px;
+	grid-template-columns: repeat(3, 1fr);
+}
+
+.article-brief{
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: repeat(6, 1fr);
+	grid-template-areas:
+			"img img"
+			"img img"
+			"title title"
+			"brief brief"
+			"brief brief"
+			"author author";
+ }
+
+.article-brief img{
+	grid-area: img;
+	width: 100%;
+}
+.article-brief h3{
+	grid-area: title;
+}
+
+@media screen and (max-width:768px) {
+    .grid-container{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media screen and (min-width:767px) and (max-width: 480px) {
+
 }
