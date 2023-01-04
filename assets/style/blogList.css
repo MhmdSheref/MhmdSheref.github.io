@@ -9,25 +9,32 @@ body {
 	justify-content: space-evenly;
 	flex-wrap: wrap;
 	gap: 10px;
-
 }
 
 main {
 	margin: auto;
 	box-shadow: 0 0 10px black;
 	padding: 50px 30px;
-	background-color: #223;
+	background-color: var(--main-blog-color);
 	max-width: 1080px;
 }
 
 aside {
 	box-shadow: 0 0 10px black;
-	background-color: #223;
-	padding: 50px 30px;
+	background-color: var(--main-blog-color);
+	padding: 50px 40px;
 }
 
+aside li {
+	color: #8888;
+	padding: 2px 0;
+}
 aside a {
-	color: gray;
+	color: #fff6;
+	text-decoration: none;
+}
+aside a:hover {
+	color: #fff8;
 }
 
 .flex-container {

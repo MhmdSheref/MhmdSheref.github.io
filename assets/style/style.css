@@ -1,3 +1,8 @@
+:root {
+    --main-blog-color: #223;
+    --nav-color: #b91d735b;
+}
+
 html {
     font-family: sans-serif;
 }
@@ -10,7 +15,7 @@ body {
 header {
     z-index: 10;
     position: fixed;
-    background-color: #b91d735b;
+    background-color: var(--nav-color);
     box-shadow: 0 1px 20px rgba(0, 0, 0, 0.5);
     width: 100%;
 }
