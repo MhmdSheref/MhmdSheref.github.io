@@ -9,6 +9,7 @@ body {
 	justify-content: space-evenly;
 	flex-wrap: wrap;
 	gap: 10px;
+
 }
 
 main {
@@ -44,7 +45,6 @@ aside a {
 	text-decoration: none;
 	display: grid;
 	filter: brightness(80%);
-	align-items: center;
 	grid-template-columns: repeat(6, 1fr);
 	grid-template-rows: 1fr 2fr 1fr;
 	border-left: solid #0006 20px;
@@ -52,52 +52,127 @@ aside a {
 	grid-template-areas:
 			"img img title title title title"
 			"img img brief brief brief brief"
-			"img img author author . date";
+			"img img bar bar bar bar";
 }
+
 .article-brief:hover {
 	background-color: #fff2;
 	filter: brightness(100%);
+	box-shadow: 0 0 5px black;
 }
 
-.article-brief img {
+.article-brief> img {
 	grid-area: img;
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
 	mask-image: linear-gradient(90deg, black 70%, transparent 100%);
+	/*noinspection CssInvalidPropertyValue*/
 	-webkit-mask-image: linear-gradient(90deg, black 70%, transparent 100%);
 }
 
 .article-brief h2 {
 	grid-area: title;
+	border-bottom: 1px solid #fffa;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
 }
 
 .article-brief p {
 	align-self: flex-start;
 	grid-area: brief;
 	color: #fffc;
+	margin: 0 10px;
+	display: -webkit-box;
+	display: -moz-box;
+	-webkit-box-orient: vertical;
+	-moz-box-orient: vertical;
+	line-clamp: 6;
+	-webkit-line-clamp: 6;
+	overflow: hidden;
 }
 
-.article-brief address {
+.info-bar {
+	grid-area: bar;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+address {
 	grid-area: author;
 	color: #fff6;
+	margin: 10px;
+	display: flex;
+	gap: 10px;
+	align-items: center;
 }
 
-.article-brief .date {
+.profile-image {
+	width: 40px;
+	border-radius: 100%;
+}
+
+.date {
 	text-align: center;
 	grid-area: date;
 	color: #fff8;
+	margin: 15px;
 }
+
 @media screen and (max-width:1380px) {
 	aside {
 		width: 100vw;
 		max-width: 1080px;
+		padding: 0 10px;
+	}
+	.main-container {
+		margin: 0 10px;
+	}
+	main{
+		padding: 50px 10px;
 	}
 }
 
-@media screen and (max-width:768px) and (min-width:481px) {
-	/*TODO: make tablet usalbe*/
-}
 @media screen and (max-width: 480px) {
-	/*TODO: make mobile usalbe*/
+	.article-brief {
+		display: grid;
+		align-items: center;
+		grid-template-columns: 2fr 1fr;
+		grid-template-rows: 4fr 4fr 3fr 4fr 2fr;
+		border: 0;
+		box-shadow: 0 0 3px black;
+		padding: 10px;
+		grid-template-areas:
+				"img img"
+				"img img"
+				"title title"
+				"brief brief"
+				"bar bar";
+	}
+	.article-brief p {
+		-webkit-box-orient: vertical;
+		-moz-box-orient: vertical;
+		line-clamp: 6;
+		-webkit-line-clamp: 6;
+	}
+	.article-brief h2 {
+		align-self: flex-end;
+		white-space: normal;
+		display: -webkit-box;
+		display: -moz-box;
+		-webkit-box-orient: vertical;
+		-moz-box-orient: vertical;
+		line-clamp: 2;
+		-webkit-line-clamp: 2;
+		overflow: hidden;
+		margin-top: 0;
+	}
+
+	.article-brief> img {
+		mask-image: linear-gradient(black 80%, transparent 100%);
+		/*noinspection CssInvalidPropertyValue*/
+		-webkit-mask-image: linear-gradient(black 80%, transparent 100%);
+	}
 }
