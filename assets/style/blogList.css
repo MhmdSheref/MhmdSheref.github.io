@@ -1,41 +1,5 @@
 @import "style.css";
-
-body {
-	background-color: #335;
-}
-
-.main-container {
-	display: flex;
-	justify-content: space-evenly;
-	flex-wrap: wrap;
-	gap: 10px;
-}
-
-main {
-	margin: auto;
-	box-shadow: 0 0 10px black;
-	padding: 50px 30px;
-	background-color: var(--main-blog-color);
-	max-width: 1080px;
-}
-
-aside {
-	box-shadow: 0 0 10px black;
-	background-color: var(--main-blog-color);
-	padding: 50px 40px;
-}
-
-aside li {
-	color: #8888;
-	padding: 2px 0;
-}
-aside a {
-	color: #fff6;
-	text-decoration: none;
-}
-aside a:hover {
-	color: #fff8;
-}
+@import "blogBase.css";
 
 .flex-container {
 	justify-content: space-evenly;
@@ -47,14 +11,15 @@ aside a:hover {
 }
 
 .article-brief {
-	transition: background-color 100ms, filter 200ms;
-	color: #fff;
+	color: #000c;
+	transition: background-color 100ms, filter 200ms, color 100ms;
+	background-color: #ccf2;
 	text-decoration: none;
 	display: grid;
 	filter: brightness(80%);
 	grid-template-columns: repeat(6, 1fr);
 	grid-template-rows: 1fr 2fr 1fr;
-	border-left: solid #0006 20px;
+	border-left: solid #0056 20px;
 	border-radius: 3px;
 	grid-template-areas:
 			"img img title title title title"
@@ -63,7 +28,8 @@ aside a:hover {
 }
 
 .article-brief:hover {
-	background-color: #fff2;
+	color: #000f;
+	background-color: #ccf9;
 	filter: brightness(100%);
 	box-shadow: 0 0 5px black;
 }
@@ -80,7 +46,7 @@ aside a:hover {
 
 .article-brief h2 {
 	grid-area: title;
-	border-bottom: 1px solid #fffa;
+	border-bottom: 1px solid #0006;
 	white-space: nowrap;
 	overflow: hidden;
 	text-overflow: ellipsis;
@@ -89,7 +55,7 @@ aside a:hover {
 .article-brief p {
 	align-self: flex-start;
 	grid-area: brief;
-	color: #fffc;
+	color: #000c;
 	margin: 0 10px;
 	display: -webkit-box;
 	display: -moz-box;
@@ -105,41 +71,6 @@ aside a:hover {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-}
-
-address {
-	grid-area: author;
-	color: #fff6;
-	margin: 10px;
-	display: flex;
-	gap: 10px;
-	align-items: center;
-}
-
-.profile-image {
-	width: 40px;
-	border-radius: 100%;
-}
-
-.date {
-	text-align: center;
-	grid-area: date;
-	color: #fff8;
-	margin: 15px;
-}
-
-@media screen and (max-width:1380px) {
-	aside {
-		width: 100vw;
-		max-width: 1080px;
-		padding: 0 10px;
-	}
-	.main-container {
-		margin: 0 10px;
-	}
-	main{
-		padding: 50px 10px;
-	}
 }
 
 @media screen and (max-width: 480px) {
@@ -158,12 +89,14 @@ address {
 				"brief brief"
 				"bar bar";
 	}
+
 	.article-brief p {
 		-webkit-box-orient: vertical;
 		-moz-box-orient: vertical;
 		line-clamp: 6;
 		-webkit-line-clamp: 6;
 	}
+
 	.article-brief h2 {
 		align-self: flex-end;
 		white-space: normal;
