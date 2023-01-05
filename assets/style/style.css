@@ -1,6 +1,4 @@
-:root {
-    --nav-color: #fff;
-}
+/*@import "light.css";*/
 
 html {
     font-family: sans-serif;
@@ -37,7 +35,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: black;
+    color: rgb(var(--text-color));
     font-size: 1.2rem;
     text-decoration: none;
     background: linear-gradient(45deg, transparent 30%, #ffb92266 80%, #b91d73AA), 0 0;
