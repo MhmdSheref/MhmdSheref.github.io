@@ -10,7 +10,7 @@
 }
 
 .article-brief {
-	color: rgba(var(--text-color), 70%);
+	color: rgba(var(--text-color), 90%);
 	transition: background-color 200ms, filter 200ms, color 100ms;
 	background-color: #ccf2;
 	text-decoration: none;
@@ -54,7 +54,7 @@
 .article-brief p {
 	align-self: flex-start;
 	grid-area: brief;
-	color: rgba(var(--text-color), 80%);;
+	color: rgba(var(--text-color), 85%);
 	margin: 0 10px;
 	display: -webkit-box;
 	display: -moz-box;
@@ -63,6 +63,8 @@
 	line-clamp: 6;
 	-webkit-line-clamp: 6;
 	overflow: hidden;
+	font-family: 'Zilla Slab', serif;
+	font-size: 1.1rem;
 }
 
 .info-bar {

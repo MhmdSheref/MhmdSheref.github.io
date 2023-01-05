@@ -1,5 +1,6 @@
 :root {
-    --nav-color: #b91d73AA;
+    --nav-color: #b91d73;
+    --nav-border-color:#ca2e84;
     --bg-color: #223;
     --main-blog-color: inherit;
     --text-color: 255, 255, 255;

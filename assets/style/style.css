@@ -1,7 +1,7 @@
-/*@import "light.css";*/
+@import url('https://fonts.googleapis.com/css2?family=Zilla+Slab&display=swap');
 
 html {
-    font-family: sans-serif;
+    font-family: Arial, sans-serif;
 }
 
 body {
@@ -10,11 +10,11 @@ body {
 }
 
 header {
-    /*border-bottom: 5px solid #b91d73;*/
+    border-bottom: 5px solid var(--nav-border-color);
     z-index: 10;
     /*position: fixed;*/
     background-color: var(--nav-color);
-    box-shadow: 0 4px 10px #b91d73aa;
+    /*box-shadow: 0 4px 10px #b91d73aa;*/
     width: 100%;
 }
 
@@ -70,7 +70,7 @@ header {
     margin: auto;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-weight: 900;
-    font-size: min(15vw , 30vh);
+    font-size: min(15vw , 25vh);
     color: white;
 }
 

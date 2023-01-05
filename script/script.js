@@ -1,5 +1,10 @@
-
 addEventListener("load", checkLightDark)
+
+let path = "assets/style/"
+if (/^\/index.html\/blogs\//.test(document.location.pathname)) {
+    path = "../assets/style/"
+}
+
 
 function switchLightDark() {
     if (localStorage.getItem("dark-mode") === "true") {
@@ -12,14 +17,14 @@ function switchLightDark() {
 }
 
 function checkLightDark () {
-    let btn = document.querySelector("#light-dark-button");
-    let link = document.querySelector("#light-dark");
+    const btn = document.querySelector("#light-dark-button");
+    const link = document.querySelector("#light-dark");
     if (localStorage.getItem("dark-mode") === "true") {
-        link.setAttribute("href", "assets/style/dark.css");
+        link.setAttribute("href", path + "dark.css");
          btn.innerText = "Light Mode";
     }
     else {
-        link.setAttribute("href", "assets/style/light.css");
+        link.setAttribute("href", path + "light.css");
         btn.innerText = "Dark Mode";
     }
 

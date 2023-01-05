@@ -2,6 +2,7 @@
 
 body {
     background-color: var(--bg-color);
+    color: var(--text-color)
 }
 
 .main-container {
@@ -14,14 +15,12 @@ body {
 
 main {
     margin: 20px auto;
-    /*box-shadow: 0 0 10px black;*/
     padding: 50px 10px;
     background-color: var(--main-blog-color);
     max-width: 1080px;
 }
 
 aside {
-    /*box-shadow: 0 0 10px black;*/
     background-color: var(--main-blog-color);
     padding: 50px 20px;
     margin: 20px 0;
