@@ -5,7 +5,6 @@ if (/^\/index.html\/blogs\//.test(document.location.pathname)) {
     path = "../assets/style/"
 }
 
-
 function switchLightDark() {
     if (localStorage.getItem("dark-mode") === "true") {
         localStorage.setItem("dark-mode", "false");

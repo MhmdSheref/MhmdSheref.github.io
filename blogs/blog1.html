@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <link id="light-dark" rel="stylesheet" href="../assets/style/light.css">
-  <link rel="stylesheet" href="../assets/style/blogList.css">
+  <link rel="stylesheet" href="../assets/style/blog.css">
   <link rel="shortcut icon" href="../assets/image/favicon.ico" type="image/x-icon">
   <meta charset="UTF-8">
   <meta name="viewport"
@@ -21,18 +21,36 @@
     </label>
     <input type="checkbox" name="ham-menu-hidden" id="ham-menu-hidden">
     <div class="nav-container">
-      <a href="../blogs.html">Blogs</a>
-      <a href="#">Contact</a>
-      <a href="#">About</a>
-      <a href="#" onclick="switchLightDark()" id="light-dark-button">Dark Mode</a>
+      <a class="nav-button" href="../blogs.html">Blogs</a>
+      <a class="nav-button" href="#">Contact</a>
+      <a class="nav-button" href="#">About</a>
+      <button class="nav-button" onclick="switchLightDark()" id="light-dark-button">Dark Mode</button>
     </div>
   </nav>
 </header>
 <div class="main-container">
   <main>
+    <button onclick="history.back()">go back</button>
     <article>
+      <img class="head-image" src="https://images.unsplash.com/photo-1672501426705-072bdfcf358c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2066&q=80"
+           alt="#">
       <h1>Real Life Changelog</h1>
-      <section><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias distinctio fugit quas rerum voluptatum. A eum exercitationem fugiat illo maxime, perspiciatis possimus temporibus. Alias debitis esse fugit libero magni mollitia nostrum nulla officiis placeat quaerat qui quo sint, vel! Eligendi est expedita hic ipsa itaque quibusdam reiciendis reprehenderit voluptate, voluptatum?</p></section>
+      <div class="info-bar">
+        <address>
+          <img width="40px" class="profile-image" src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png" alt="Mohamed Sheref">
+          Mohamed Sheref
+        </address>
+        <span class="date">1/1/2023</span>
+      </div>
+      <p class="content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam pulvinar est in enim tristique vestibulum. Vivamus ligula felis, iaculis quis gravida a, cursus id felis. Donec eros magna, auctor et augue vel, ultrices iaculis nisi. Donec venenatis tellus non arcu vehicula dictum. Donec pulvinar dui in fringilla placerat. Suspendisse aliquet nec nibh et vulputate. In bibendum, nisi et pretium scelerisque, augue eros elementum dui, ut venenatis dolor purus vel dui.
+
+        Cras vel neque sed lectus luctus luctus. Fusce lorem sem, gravida ac nulla sed, auctor dictum tortor. Morbi dictum nibh sed est bibendum, vitae lobortis tortor hendrerit. Maecenas vitae cursus massa. Maecenas eu semper libero. Mauris accumsan arcu ac commodo commodo. Vivamus in finibus felis, ac vehicula ex. Ut tristique rutrum nisi pellentesque aliquet. Fusce vitae erat facilisis, ullamcorper orci eu, tempus erat. Phasellus nisl est, euismod at malesuada iaculis, molestie vel nisi. Mauris commodo ullamcorper tortor, a interdum leo laoreet nec. Nunc pellentesque mi eu sem posuere elementum. Quisque dolor velit, vulputate et auctor non, tempor id mi. In tempor, augue non accumsan porttitor, turpis leo molestie lacus, at hendrerit erat purus in metus. Integer lacinia consequat tincidunt. Donec tristique vitae sem eget sollicitudin.
+
+        Pellentesque dictum purus lacus, id laoreet ligula ullamcorper id. Vestibulum eleifend elementum nisl, ut tincidunt felis lobortis eget. Ut sagittis, metus vitae vulputate accumsan, eros nisl sagittis augue, vitae egestas ex elit iaculis neque. Integer vel volutpat sem. Suspendisse et erat a arcu hendrerit ultricies. Mauris sit amet arcu in ex ultricies tincidunt vel sit amet arcu. Aliquam condimentum, lectus a placerat ullamcorper, purus est suscipit urna, a luctus odio lorem at tortor. Nam blandit ipsum a molestie varius. Suspendisse vehicula lectus non odio porta laoreet.
+
+        Cras vitae cursus tellus. Proin mattis ante sit amet semper ullamcorper. Duis tempor pellentesque tortor eget elementum. Cras eget egestas metus. Maecenas dapibus suscipit quam, at elementum tellus vestibulum quis. Integer vestibulum, lorem a malesuada pulvinar, nibh felis mollis nunc, id faucibus mauris nisl quis lorem. Fusce eget varius dui. Donec non facilisis mi, hendrerit sodales nulla. Donec a efficitur ipsum. Nam convallis ante ligula, eu fermentum ex tristique a. Etiam eget porttitor est. In laoreet lorem in mattis lacinia. Aliquam erat volutpat.
+
+        Nunc at egestas purus, eu molestie lorem. Duis tincidunt nisi mollis fringilla pellentesque. Donec vel arcu molestie, elementum nulla nec, commodo odio. Mauris ac urna lorem. Aliquam faucibus diam nulla, quis consequat metus pulvinar vel. Phasellus ligula augue, aliquam id luctus id, elementum vitae ante. Nunc id velit ac purus sagittis pharetra. Sed ac nunc sed diam venenatis efficitur sit amet eget lacus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc in sem tristique, suscipit leo fermentum, aliquam velit. Suspendisse potenti. Sed at arcu blandit lectus euismod blandit. Vivamus magna ipsum, dignissim nec faucibus eu, viverra vitae lacus. Aliquam rhoncus ipsum eget sem iaculis porta. Aenean blandit efficitur purus.</p>
     </article>
 
   </main>

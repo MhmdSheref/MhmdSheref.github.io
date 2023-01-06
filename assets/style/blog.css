@@ -1,2 +1,24 @@
 @import "style.css";
-@import "blogList.css";
+@import "blogBase.css";
+
+main {
+    background-color: rgba(204, 204, 255, calc(var(--hover-intensity) / 4));
+    padding: 50px 30px;
+}
+
+.main-container{
+    background: linear-gradient(transparent -30%, var(--bg-color) min(50%, 60vh)), url("https://images.unsplash.com/photo-1672501426705-072bdfcf358c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2066&q=80") no-repeat center center fixed;
+    background-size: cover;
+}
+
+.head-image {
+    width: 100%;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+.content {
+    white-space: break-spaces;
+}
