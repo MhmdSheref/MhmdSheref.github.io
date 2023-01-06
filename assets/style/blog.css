@@ -15,10 +15,21 @@ main {
     width: 100%;
 }
 
-h1 {
-    font-size: 3rem;
-}
-
 .content {
     white-space: break-spaces;
+    max-width: 800px;
+    margin: 50px auto;
+    line-height: 1.3rem;
+}
+
+.back {
+    border: 0;
+    border-bottom: 1px solid var(--nav-color);
+    background-color: transparent;
+    cursor: pointer;
+    color: var(--nav-color);
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 0;
+    margin: 3px 10px;
 }

@@ -45,6 +45,7 @@
 
 .article-brief h2 {
 	grid-area: title;
+	margin-right: 10px;
 	border-bottom: 1px solid rgba(var(--text-color), 40%);;
 	white-space: nowrap;
 	overflow: hidden;
