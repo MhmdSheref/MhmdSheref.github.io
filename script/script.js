@@ -1,7 +1,7 @@
 addEventListener("load", checkLightDark)
 
 let path = "assets/style/"
-if (/^\/index.html\/blogs\//.test(document.location.pathname)) {
+if (/\/blogs\//.test(document.location.pathname)) {
     path = "../assets/style/"
 }
 
