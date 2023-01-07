@@ -3,7 +3,7 @@
 
 main {
     background-color: rgba(204, 204, 255, calc(var(--hover-intensity) / 4));
-    padding: 50px 30px;
+    padding: 60px 30px;
 }
 
 .main-container{
@@ -31,5 +31,5 @@ main {
     font-size: 1.2rem;
     font-weight: bold;
     padding: 0;
-    margin: 3px 10px;
+    margin: 10px;
 }
