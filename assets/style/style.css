@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Arbutus+Slab&display=swap');
 
 html {
     font-family: Arial, sans-serif;
@@ -81,6 +82,17 @@ header {
     font-size: 3rem;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: whitesmoke;
+}
+
+footer {
+    color: rgb(var(--text-color));
+    background-color: var(--nav-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 40px 0;
+    width: 100%;
 }
 
 @media  screen and (max-width: 480px) {

@@ -2,11 +2,12 @@
 @import "blogBase.css";
 
 main {
-    background-color: rgba(204, 204, 255, calc(var(--hover-intensity) / 4));
+    background-color: var(--main-blog-color);
     padding: 60px 30px;
 }
 
 .main-container{
+    --bg-image: ""; /*gets updated by js*/
     background:
         linear-gradient(transparent -30%, var(--bg-color) min(40%, 200vw)),
         var(--bg-image) no-repeat top center fixed;

@@ -16,7 +16,6 @@ body {
 main {
     margin: 0 auto;
     padding: 50px 10px;
-    background-color: var(--main-blog-color);
     max-width: 900px;
 }
 
@@ -24,6 +23,7 @@ aside {
     background-color: var(--main-blog-color);
     padding: 50px 20px;
     margin: 0;
+    max-width: 300px;
 }
 
 aside li {
@@ -72,11 +72,17 @@ h1 {
     font-size: 3rem;
 }
 
+h1,
+h2,
+h3 {
+    font-family: 'Arbutus Slab', serif;
+}
+
 @media screen and (max-width:1380px) {
     aside {
         width: 100vw;
-        max-width: 1080px;
-        padding: 0 10px;
+        max-width: 900px;
+        padding: 0 30px;
     }
 
     main{
