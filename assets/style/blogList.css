@@ -1,4 +1,8 @@
-@import "blogBase.css";
+.banner {
+	margin-top: 59px;
+	width: 100%;
+	opacity: calc(var(--hover-intensity) + 40%);
+}
 
 .flex-container {
 	justify-content: space-evenly;
@@ -68,6 +72,11 @@
 
 
 @media screen and (max-width: 480px) {
+	.banner {
+		height: 60vw;
+		object-fit: cover;
+	}
+
 	.article-brief {
 		display: grid;
 		align-items: center;

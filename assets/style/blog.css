@@ -1,6 +1,3 @@
-@import "style.css";
-@import "blogBase.css";
-
 main {
     background-color: var(--main-blog-color);
     padding: 60px 30px;

@@ -1,3 +1,6 @@
+@import "blogBase.css";
+@import "blogList.css";
+@import "blog.css";
 @import url('https://fonts.googleapis.com/css2?family=Arbutus+Slab&display=swap');
 
 html {
@@ -67,21 +70,6 @@ header {
 
 #ham-menu-hidden {
     display: none;
-}
-
-.title {
-    margin: auto;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-weight: 900;
-    font-size: min(15vw , 25vh);
-    color: white;
-}
-
-.sub-title {
-    margin: 10px auto;
-    font-size: 3rem;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: whitesmoke;
 }
 
 footer {
