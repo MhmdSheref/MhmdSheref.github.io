@@ -12,13 +12,27 @@ main {
 
 .head-image {
     width: 100%;
+    margin-bottom: 50px;
 }
 
 .content {
-    white-space: break-spaces;
+    white-space: pre-line;
     max-width: 800px;
-    margin: 50px auto;
-    line-height: 1.3rem;
+    margin: 0 auto;
+}
+.content:first-of-type::first-letter{
+    font-weight: bold;
+    font-size: 2.5rem;
+    font-family: 'Arbutus Slab', serif;
+}
+
+blockquote {
+    border-radius: 7px;
+    font-family: 'Arbutus Slab', serif;
+    color: rgba(var(--text-color), 70%);
+    background-color: rgba(30, 144, 255, 0.04);
+    border-left: dodgerblue solid 5px;
+    padding: 5px 10px;
 }
 
 .back {

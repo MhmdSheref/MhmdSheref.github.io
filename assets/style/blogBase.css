@@ -76,6 +76,10 @@ h3 {
     font-family: 'Arbutus Slab', serif;
 }
 
+p {
+    line-height: 1.3rem;
+}
+
 @media screen and (max-width:1380px) {
     aside {
         width: 100vw;
