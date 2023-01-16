@@ -1,6 +1,5 @@
 body {
     background-color: var(--bg-color);
-    color: var(--text-color)
 }
 
 .main-container {
@@ -77,6 +76,7 @@ h3 {
 }
 
 p {
+    color: rgba(var(--text-color), 80%);
     line-height: 1.3rem;
 }
 
