@@ -33,6 +33,7 @@ blockquote {
     background-color: rgba(30, 144, 255, 0.04);
     border-left: dodgerblue solid 5px;
     padding: 5px 10px;
+    margin-right: 0;
 }
 
 .back {
