@@ -2,6 +2,8 @@
 
 This project is a merge between Project 1 and Project 2 meant to showcase them both using the github pages feature.
 
+### [Preview here](https://mhmdsheref.github.io/ "A link to the Github Pages page")
+
 * ## Project 1 : Personal Blog Website (Real Life Changelog)
 **Main idea:** A changelog like in videogames with relevant real life news and videogame style articles about real life topics.<br>
 
