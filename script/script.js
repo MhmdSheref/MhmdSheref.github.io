@@ -1,12 +1,9 @@
 
-let path = "assets/style/"
+let path = "/assets/style/"
 const btn = document.querySelector("#light-dark-button");
 const link = document.querySelector("#light-dark");
-if (/\/blogs\//.test(document.location.pathname)) {
-    path = "../assets/style/"
-}
-checkLightDark()
 
+checkLightDark()
 function switchLightDark() {
     if (localStorage.getItem("dark-mode") === "true") {
         localStorage.setItem("dark-mode", "false");
@@ -27,7 +24,6 @@ function checkLightDark () {
         btn.innerText = "Dark Mode";
     }
 }
-
 
 let previousScrollY = scrollY;
 let header = document.querySelector("header")
