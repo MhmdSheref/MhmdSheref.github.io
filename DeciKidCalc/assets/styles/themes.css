@@ -27,7 +27,7 @@ body {
     color: white;
 }
 
-.Anime {
+.anime {
     --header-color: #fff5;
     background: url("../images/anime.jpg") center center;
     background-size: cover;
