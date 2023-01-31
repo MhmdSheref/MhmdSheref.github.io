@@ -1,0 +1,8 @@
+:root {
+    --nav-color: #fff;
+    --nav-border-color: #eee;
+    --bg-color: #f7f9ff;
+    --main-blog-color: rgba(204, 204, 255, calc(var(--hover-intensity) / 4));
+    --text-color: 0, 0, 0;
+    --hover-intensity: 60%;
+}

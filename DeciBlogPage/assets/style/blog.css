@@ -1,0 +1,49 @@
+main {
+    background-color: var(--main-blog-color);
+    padding: 60px 30px;
+}
+
+.main-container{
+    --bg-image: ""; /*gets updated by js*/
+    background:
+        linear-gradient(transparent -30%, var(--bg-color) min(40%, 200vw)),
+        var(--bg-image) no-repeat top center fixed;
+}
+
+.head-image {
+    width: 100%;
+    margin-bottom: 50px;
+}
+
+.content {
+    white-space: pre-line;
+    max-width: 800px;
+    margin: 0 auto;
+}
+.content:first-of-type::first-letter{
+    font-weight: bold;
+    font-size: 2.5rem;
+    font-family: 'Arbutus Slab', serif;
+}
+
+blockquote {
+    border-radius: 7px;
+    font-family: 'Arbutus Slab', serif;
+    color: rgba(var(--text-color), 70%);
+    background-color: rgba(30, 144, 255, 0.04);
+    border-left: dodgerblue solid 5px;
+    padding: 5px 10px;
+    margin-right: 0;
+}
+
+.back {
+    border: 0;
+    border-bottom: 1px solid var(--nav-color);
+    background-color: transparent;
+    cursor: pointer;
+    color: var(--nav-color);
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 0;
+    margin: 10px;
+}

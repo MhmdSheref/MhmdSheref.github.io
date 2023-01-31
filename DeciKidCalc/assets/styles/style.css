@@ -1,0 +1,260 @@
+@import "themes.css";
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+}
+
+.login-form > input,
+.login-form > select{
+    border: 0;
+    box-shadow: 0 0 3px;
+    border-radius: 10px;
+    height: 2rem;
+
+}
+
+input[type=submit] {
+    background-color: #0c3;
+}
+
+.login-form > input:focus,
+.login-form > select:focus{
+    outline: none;
+}
+
+.form-container {
+    display: none;
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    background-color: #fff;
+}
+
+.login-form {
+    display: grid;
+    align-items: flex-end;
+    grid-template-columns: 1fr 0.1fr 2fr;
+    grid-template-rows: repeat(9, 1fr);
+    grid-template-areas:
+            "h1 h1 h1"
+            "label1 . image"
+            "field1 . image"
+            "label2 . image"
+            "field2 . image"
+            "label3 . image"
+            "field3 . image"
+            ". . image"
+            "submit submit submit";
+    background-color: lightskyblue;
+    padding: 50px 15px 30px 15px;
+    border-radius: 20px;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: fit-content;
+}
+
+.login-form > h1 {
+    grid-area: h1;
+    margin: 0;
+}
+
+.name-label {
+    grid-area: label1;
+}
+
+.username {
+    grid-area: field1;
+}
+
+.dob-label {
+    grid-area: label2;
+}
+
+.dob {
+    grid-area: field2;
+}
+
+.theme-label {
+    grid-area: label3;
+}
+
+.theme {
+    grid-area: field3;
+}
+
+.submit {
+    grid-area: submit;
+}
+
+.preview-image {
+    grid-area: image;
+    height: 300px;
+    border-radius: 10px;
+}
+
+/*===========================================================================*/
+
+.info-bar {
+    font-size: 1.3rem;
+    height: 100px;
+    background-color: var(--header-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.data {
+    padding-left: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.score {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.settings-icon {
+    padding: 10px;
+}
+
+.settings {
+    position: fixed;
+    display: none;
+    right: 0;
+    top: 100px;
+    flex-direction: column;
+    background-color: var(--header-color);
+    padding: 10px;
+}
+
+
+#hidden-checkbox {
+    display: none;
+}
+
+#hidden-checkbox:checked ~ .settings {
+    display: flex;
+}
+
+/*===========================================================================*/
+
+.calc {
+    margin: 100px auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr) 1.5fr;
+    grid-template-rows: repeat(6, 1fr);
+    width: 100vw;
+    max-width: 400px;
+    font-size: 30px;
+}
+
+#math-exp {
+    grid-area: 1 / 1 / 1 / 4;
+    min-width: 0;
+}
+
+#math-ans {
+    min-width: 0;
+}
+
+.calc * {
+    font-size: inherit;
+}
+
+.exp-ans-cont {
+    display: flex;
+}
+
+input:focus {
+    outline: none;
+}
+
+.numpad {
+    color: inherit;
+    background-color: var(--numpad-color);
+    margin: 1px 1px;
+    box-shadow: 0 0 3px black;
+    border: none;
+    cursor: pointer;
+}
+
+.sub {
+    background-color: #00cc33;
+}
+
+.equation {
+    background-color: var(--operator-color);
+}
+
+.clear {
+    background-color: #ff553e;
+}
+
+.operator {
+    background-color: var(--operator-color);
+}
+
+.numpad:hover {
+    filter: brightness(110%);
+}
+
+.numpad:active {
+    box-shadow: 0 0 0;
+    filter: brightness(95%);
+}
+
+
+
+
+
+/*===========================================================================*/
+
+@media screen and (max-width: 768px) {
+    .preview-image {
+        display: none;
+    }
+
+    .login-form {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(8, 1fr);
+        grid-template-areas:
+            "label1"
+            "field1"
+            "label2"
+            "field2"
+            "label3"
+            "field3"
+            "."
+            "submit";
+    }
+
+    .login-form > input,
+    .login-form > select{
+        width: 70vw;
+        max-width: 250px;
+    }
+
+}
+
+@media screen and (max-width: 480px) {
+    .info-bar {
+        flex-direction: column;
+        height: auto;
+        gap: 10px;
+        align-items: stretch;
+    }
+
+    .settings {
+        position: static;
+        display: none;
+        flex-direction: column;
+        background-color: transparent;
+    }
+}

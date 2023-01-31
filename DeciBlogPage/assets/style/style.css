@@ -1,0 +1,111 @@
+@import "blogBase.css";
+@import "blogList.css";
+@import "blog.css";
+@import url('https://fonts.googleapis.com/css2?family=Arbutus+Slab&display=swap');
+
+html {
+    font-family: Arial, sans-serif;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+header {
+    transition: top 150ms ease-in-out;
+    top: 0;
+    border-bottom: 5px solid var(--nav-border-color);
+    z-index: 10;
+    position: fixed;
+    background-color: var(--nav-color);
+    /*box-shadow: 0 4px 10px #b91d73aa;*/
+    width: 100%;
+}
+
+.nav-container {
+    /*padding: 0;*/
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+    height: inherit;
+    margin: 0;
+    width: 55%;
+    max-width: 600px;
+    flex-direction: row;
+}
+
+.nav-button {
+    border: none;
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(var(--text-color));
+    font-size: 1.2rem;
+    text-decoration: none;
+    background: linear-gradient(45deg, transparent 30%, #ffb92266 80%, #b91d73AA), 0 0;
+    background-size: 500%;
+    transition: background-position 0.4s;
+    
+}
+
+.nav-button:hover {
+    background-position: 100% 100%;
+}
+.nav {
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+}
+
+#logo {
+    padding: 10px;
+}
+
+#ham-menu {
+    display: none;
+    padding: 10px;
+}
+
+#ham-menu-hidden {
+    display: none;
+}
+
+footer {
+    color: rgb(var(--text-color));
+    background-color: var(--nav-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 40px 0;
+    width: 100%;
+}
+
+@media  screen and (max-width: 480px) {
+    .nav-container {
+        display: none;
+        background-color: #0001;
+        width: 100%;
+        max-width: none;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+
+    #ham-menu {
+        display: block;
+    }
+
+    #ham-menu-hidden:checked + .nav-container {
+        display: flex;
+    }
+
+    .nav {
+        flex-wrap: wrap;
+    }
+
+    .nav-button {
+        padding: 7px;
+    }
+}

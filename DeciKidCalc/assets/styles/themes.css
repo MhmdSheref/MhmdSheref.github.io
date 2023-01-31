@@ -1,0 +1,62 @@
+body {
+    height: 100vh;
+}
+
+.basic {
+    color: black;
+    --header-color: #0005;
+    --numpad-color: lightblue;
+    --operator-color: #4ec0e5;
+    background: linear-gradient(white, gray);
+}
+
+.cars {
+    --header-color: #ffde63cc;
+    background: url("../images/cars.jpg") center center;
+    background-size: cover;
+    --numpad-color: #ff7171;
+    --operator-color: #feff7c;
+}
+
+.batman {
+    --header-color: #0005;
+    background: url("../images/batman.jpg") center center;
+    background-size: cover;
+    --numpad-color: #282828;
+    --operator-color: #babb00;
+    color: white;
+}
+
+.Anime {
+    --header-color: #fff5;
+    background: url("../images/anime.jpg") center center;
+    background-size: cover;
+    --numpad-color: lightblue;
+    --operator-color: #4ec0e5;
+}
+
+.space {
+    --header-color: #000c;
+    background: url("../images/space.jpg") center center;
+    background-size: cover;
+    --numpad-color: purple;
+    --operator-color: #4d004d;
+    color: white;
+}
+
+.disney {
+    --header-color: #0af5;
+    background: url("../images/disney.jpg") center center;
+    background-size: cover;
+    --numpad-color: #60a9ff;
+    --operator-color: #ffafff;
+}
+
+.cute {
+    --header-color: #ff74dd44;
+    background: url("../images/cute.jpg") center center;
+    background-size: cover;
+    --numpad-color: #ffabd1;
+    --operator-color: #ff74dd;
+    color: black;
+}

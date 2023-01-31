@@ -1,0 +1,121 @@
+.banner {
+	margin-top: 59px;
+	width: 100%;
+	opacity: calc(var(--hover-intensity) + 40%);
+}
+
+.flex-container {
+	justify-content: space-evenly;
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	grid-auto-flow: row;
+	gap: 30px;
+}
+
+.article-brief {
+	color: rgba(var(--text-color), 90%);
+	transition: background-color 200ms, filter 200ms, color 100ms;
+	background-color: #ccf2;
+	text-decoration: none;
+	display: grid;
+	filter: brightness(80%);
+	grid-template-columns: repeat(6, 1fr);
+	grid-template-rows: 1fr 2fr 1fr;
+	border-left: solid #0056 20px;
+	border-radius: 3px;
+	grid-template-areas:
+			"img img title title title title"
+			"img img brief brief brief brief"
+			"img img bar bar bar bar";
+}
+
+.article-brief:hover {
+	color: rgba(var(--text-color), 100%);
+	background-color: rgba(204, 204, 255, var(--hover-intensity));
+	filter: brightness(100%);
+	box-shadow: 0 0 5px black;
+}
+
+.article-brief> img {
+	grid-area: img;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	mask-image: linear-gradient(90deg, black 70%, transparent 100%);
+	/*noinspection CssInvalidPropertyValue*/
+	-webkit-mask-image: linear-gradient(90deg, black 70%, transparent 100%);
+}
+
+.article-brief h2 {
+	grid-area: title;
+	margin-right: 10px;
+	border-bottom: 1px solid rgba(var(--text-color), 40%);;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.article-brief p {
+	align-self: flex-start;
+	grid-area: brief;
+	color: rgba(var(--text-color), 85%);
+	margin: 0 10px;
+	display: -webkit-box;
+	display: -moz-box;
+	-webkit-box-orient: vertical;
+	-moz-box-orient: vertical;
+	line-clamp: 6;
+	-webkit-line-clamp: 6;
+	overflow: hidden;
+}
+
+
+@media screen and (max-width: 480px) {
+	.banner {
+		height: 60vw;
+		object-fit: cover;
+	}
+
+	.article-brief {
+		display: grid;
+		align-items: center;
+		grid-template-columns: 2fr 1fr;
+		grid-template-rows: 4fr 4fr 3fr 4fr 2fr;
+		border: 0;
+		box-shadow: 0 0 3px black;
+		padding: 10px;
+		grid-template-areas:
+				"img img"
+				"img img"
+				"title title"
+				"brief brief"
+				"bar bar";
+	}
+
+	.article-brief p {
+		-webkit-box-orient: vertical;
+		-moz-box-orient: vertical;
+		line-clamp: 6;
+		-webkit-line-clamp: 6;
+	}
+
+	.article-brief h2 {
+		align-self: flex-end;
+		white-space: normal;
+		display: -webkit-box;
+		display: -moz-box;
+		-webkit-box-orient: vertical;
+		-moz-box-orient: vertical;
+		line-clamp: 2;
+		-webkit-line-clamp: 2;
+		overflow: hidden;
+		margin-top: 0;
+	}
+
+	.article-brief> img {
+		mask-image: linear-gradient(black 80%, transparent 100%);
+		/*noinspection CssInvalidPropertyValue*/
+		-webkit-mask-image: linear-gradient(black 80%, transparent 100%);
+	}
+}
