@@ -1,4 +1,4 @@
-let c = document.getElementById("perlin");
+let c = document.getElementById("canvas");
 let ctx = c.getContext("2d");
 ctx.fillStyle = "rgba(0,0,0)";
 ctx.fillRect(0, 0, c.width, c.height);
