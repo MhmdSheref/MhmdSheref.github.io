@@ -8,7 +8,39 @@
     <title>Document</title>
 </head>
 <body>
-<canvas id="canvas" width="1280" height="720"></canvas>
+<canvas id="canvas" width="1280" height="720"></canvas><br>
+
+<label for="number">number</label>
+<input id="number" type="number" value="500" step="10" min="0">
+
+<label for="disappearing">disappearing</label>
+<input id="disappearing" type="checkbox" checked>
+<br>
+<label for="color">Color:</label>
+<input id="color" type="color" value="#FF0000">
+
+<label for="randomize">Random Colors</label>
+<input id="randomize" type="checkbox">
+
+<label for="visibility">transparency</label>
+<input id="visibility" type="checkbox" checked>
+
+<br>
+
+<label for="waves">waves</label>
+<input id="waves" type="radio" name="a" checked>
+<br>
+<label for="noise">noise</label>
+<input id="noise" type="radio" name="a">
+<br>
+<label for="center">center</label>
+<input id="center" type="radio" name="a">
+<br>
+
+
+<input id="start" type="button" value="start">
+<input id="stop" type="button" value="stop">
+
 <script src='perlin.js'></script>
 <script src="script.js"></script>
 </body>
