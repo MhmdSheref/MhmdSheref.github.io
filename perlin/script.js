@@ -44,6 +44,17 @@ function point_grid(X, Y) {
         grid.push(normalized);
     }
 }
+
+function outwards(X, Y) {
+    grid = [];
+    for (let i = 0; i < 4000; i++) {
+        let j = Math.floor(i/80);
+
+        let point = [((i%80+1)*16)-(X), ((j+1)*16)-(Y)]
+        let normalized = normalize(point)
+        grid.push(normalized);
+    }
+}
 function stroke_grid() {
 
     for (let i = 0; i < grid.length; i++) {
@@ -62,21 +73,21 @@ function color_randomizer() {
     return `rgb(${Math.floor(Math.random()*255)},${Math.floor(Math.random()*255)},${Math.floor(Math.random()*255)})`
 }
 
-function Particle(x, y, speed, id) {
-    this.id = id
+function Particle(x, y) {
     this.x = x;
     this.y = y;
-    this.speed = speed;
     this.movementVector = [0, 0];
     this.baseColor = color_randomizer()
 
-    this.move = function(color) {
+    this.move = function(color, speed) {
         const pos = {
             x: this.x,
             y: this.y,
         };
 
         this.color = color
+        this.speed = speed;
+
         if (this.color === true) {
             this.color = this.baseColor
         }
@@ -84,6 +95,10 @@ function Particle(x, y, speed, id) {
         let selected_vector = Math.round((pos.x)/16) + 80*Math.round((pos.y)/16);
         if (selected_vector < 0) {
             selected_vector += 80
+        }
+        if (this.speed > 15) {
+            if (selected_vector < 0) {selected_vector = 0}
+            if (selected_vector >=3600) {selected_vector = 3599}
         }
 
         this.movementVector[0] += grid[selected_vector][0]/20
@@ -99,19 +114,27 @@ function Particle(x, y, speed, id) {
         this.y = new_pos[1];
         ctx.lineTo(new_pos[0], new_pos[1]);
         ctx.stroke();
+        if (document.getElementById("anime").checked) {
+            if (pos.x > c.width || pos.x < 0 || pos.y > c.height || pos.y < 0) {
+                this.x = Math.random()*c.width
+                this.y = Math.random()*c.height
+                this.movementVector = [0,0]
+            }
+        } else {
+            if (pos.x > c.width) {
+                this.x = 0
+            }
+            if (pos.x < 0) {
+                this.x = c.width
+            }
+            if (pos.y > c.height) {
+                this.y = 0
+            }
+            if (pos.y < 0) {
+                this.y = c.height
+            }
+        }
 
-        if (pos.x > c.width) {
-            this.x = 0
-        }
-        if (pos.x < 0) {
-            this.x = c.width
-        }
-        if (pos.y > c.height) {
-            this.y = 0
-        }
-        if (pos.y < 0) {
-            this.y = c.height
-        }
 
 
     }
@@ -125,24 +148,29 @@ function main() {
     let num = document.getElementById("number").value
     let particles = []
     for (let i = 0; i < num; i++) {
-        let part = new Particle(Math.random()*c.width, Math.random()*c.height, 10 + Math.random(), i);
+        let part = new Particle(Math.random()*c.width, Math.random()*c.height);
         particles.push(part);
     }
 
-    if (document.getElementById("noise").checked) {noise_grid(0)}
 
     let sus = 0;
     function anim() {
         if (!stopped) {requestAnimationFrame(anim);}
+        if (document.getElementById("noise").checked) {noise_grid(0)}
         if (document.getElementById("waves").checked) {noise_grid(sus/120)}
         if (document.getElementById("center").checked){point_grid(c.width/2, c.height/2)}
+        if (document.getElementById("anime").checked) {
+            outwards(c.width/2, c.height/2)
+            if (document.getElementById("disappearing").checked) {
+                ctx.fillRect(0, 0, c.width, c.height);
+            }
+        }
         ctx.fillStyle = "rgba(0,0,0,0.05)";
         sus++
         if (sus%5 === 0 && document.getElementById("disappearing").checked) {
             ctx.fillRect(0, 0, c.width, c.height);
         }
-        particles.forEach((particle) => particle.move(document.getElementById("randomize").checked? true : (document.getElementById("color").value + (document.getElementById("visibility").checked? "35" : "ff"))))
-
+        particles.forEach((particle) => particle.move(document.getElementById("randomize").checked? true : (document.getElementById("color").value + (document.getElementById("visibility").checked? "35" : "ff")), parseFloat(document.getElementById("speed").value) + Math.random()))
 
     }
     anim();
