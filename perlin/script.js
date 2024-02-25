@@ -165,6 +165,7 @@ function main() {
                 ctx.fillRect(0, 0, c.width, c.height);
             }
         }
+        // stroke_grid()
         ctx.fillStyle = "rgba(0,0,0,0.05)";
         sus++
         if (sus%5 === 0 && document.getElementById("disappearing").checked) {
