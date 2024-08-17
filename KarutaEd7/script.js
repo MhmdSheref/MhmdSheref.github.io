@@ -4,15 +4,11 @@ let active_ed = "7";
 document.querySelector(".search_button").addEventListener("click", search);
 for (const element of document.querySelectorAll(".ed_button")) {
     element.addEventListener("click", change_ed);
-
 }
 
-
 function search() {
-    console.log("a")
     removeAllChildNodes(document.querySelector(".card_container"))
     let searchVal = document.querySelector(".search_bar").value.toLowerCase()
-    console.log(searchVal)
     for (let i = 0; i < data.length; i++) {
         if ((data[i]["character"].toLowerCase().includes(searchVal)) || (data[i]["series"].toLowerCase().includes(searchVal)) || (data[i]["date"].toLowerCase().includes(searchVal))) {
             createCard(i);
