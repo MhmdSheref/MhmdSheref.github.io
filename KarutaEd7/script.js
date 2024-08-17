@@ -2,6 +2,9 @@
 const card = document.querySelector(".card");
 let active_ed = "7";
 document.querySelector(".search_button").addEventListener("click", search);
+document.querySelector(".search_bar").addEventListener("keypress", function(event) {
+    if (event.key === "Enter") {search()}
+});
 for (const element of document.querySelectorAll(".ed_button")) {
     element.addEventListener("click", change_ed);
 }
