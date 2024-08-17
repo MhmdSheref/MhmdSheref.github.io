@@ -14,7 +14,7 @@ function search() {
     let searchVal = document.querySelector(".search_bar").value.toLowerCase()
     console.log(searchVal)
     for (let i = 0; i < data.length; i++) {
-        if ((data[i]["character"].toLowerCase().includes(searchVal)) || (data[i]["series"].toLowerCase().includes(searchVal))) {
+        if ((data[i]["character"].toLowerCase().includes(searchVal)) || (data[i]["series"].toLowerCase().includes(searchVal)) || (data[i]["date"].toLowerCase().includes(searchVal))) {
             createCard(i);
         }
     }
@@ -51,6 +51,7 @@ function createCard(i) {
     workingCard.querySelector(".img4").src= data[i]["link4"].replace("%", active_ed);
     workingCard.querySelector(".name").innerText = data[i]["character"];
     workingCard.querySelector(".series").innerText = data[i]["series"];
+    workingCard.querySelector(".date").innerText = data[i]["date"];
 
     document.querySelector(".card_container").append(workingCard);
 }
