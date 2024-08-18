@@ -6,6 +6,7 @@ body {
 header {
     display: flex;
     flex-direction: row;
+    gap: 2px;
 }
 
 .card_container {
@@ -26,7 +27,7 @@ header {
     width: 260px;
 }
 
-.img1, .img2, .img3, .img4 {
+.img1 {
     grid-area: img;
     max-width: 260px;
     max-height: 360px;
