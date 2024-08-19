@@ -27,7 +27,7 @@ header {
     width: 260px;
 }
 
-.img1 {
+.img1, .img2 {
     grid-area: img;
     max-width: 260px;
     max-height: 360px;
