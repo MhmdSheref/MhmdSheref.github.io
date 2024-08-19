@@ -53,9 +53,11 @@ function createCard(i) {
     workingCard.querySelector(".img2").src= data[i]["link"].replace("%", active_ed);
     if (data[i]["link"].includes("versioned")) {
         workingCard.querySelector(".img1").src= data[i]["link"].replace("%-1", active_ed).replace("/versioned", "");
+        workingCard.querySelector(".img3").src= data[i]["link"].replace("%-1", active_ed+ "-2");
     }
     else {
-        workingCard.querySelector(".img1").remove()
+        workingCard.querySelector(".img1").remove();
+        workingCard.querySelector(".img3").remove();
     }
     workingCard.querySelector(".name").innerText = data[i]["character"];
     workingCard.querySelector(".series").innerText = data[i]["series"];
