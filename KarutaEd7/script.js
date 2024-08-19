@@ -18,7 +18,7 @@ function search() {
             createCard(i);
         }
         if (document.querySelector(".tags").checked) {
-            if (data[i]["tags"].includes(searchVal))
+            if (data[i][`${active_ed}tags`].includes(searchVal))
             createCard(i);
         }
     }
